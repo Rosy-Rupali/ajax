@@ -4,7 +4,8 @@ function makePromiseCall(methodType, url, async = true, data = null) {
     let xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function () {
       console.log(
-        "State Changed Called. Ready State: " +
+        methodType +
+          "State Changed Called. Ready State: " +
           xhr.readyState +
           " Status:" +
           xhr.status
