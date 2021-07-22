@@ -41,10 +41,10 @@
       const deleteURL = "http://localhost:3000/employees/4";
       makePromiseCall("DELETE", deleteURL, false)
         .then((responseText) => {
-          getElem.textContent = "User Deleted: " + responseText;
+          deleteElem.textContent = "Deleted data: " + responseText;
         })
         .catch((error) => {
-          getElem.textContent = "DELETE Error Status: " + JSON.stringify(error);
+          deleteElem.textContent = "DELETE Error Status: " + JSON.stringify(error);
         });
 
       const postElem = document.querySelector("#post_services");
@@ -52,10 +52,10 @@
       const empData = { name: "Harry", salary: "5000" };
       makePromiseCall("POST", postURL, true, empData)
         .then((responseText) => {
-          getElem.textContent = "User Added: " + responseText;
+          postElem.textContent = "User Added: " + responseText;
         })
         .catch((error) => {
-          getElem.textContent = "POST Error Status: " + JSON.stringify(error);
+          postElem.textContent = "POST Error Status: " + JSON.stringify(error);
         });
     </script>
   </body>
